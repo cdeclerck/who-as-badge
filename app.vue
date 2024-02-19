@@ -13,7 +13,7 @@ import { Octokit } from "@octokit/rest"
 
 // Créez une instance Octokit en utilisant votre token d'authentification
 const octokit = new Octokit({
-  auth: "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",
+  auth: "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",
 });
 const data = ref('')
 const newOwner = ref('')
@@ -39,9 +39,9 @@ async function changeContent() {
       repo,
       path,
       message: "Mise à jour du fichier via l'API GitHub",
-      content: btoa({
+      content: btoa(JSON.stringify({
         user: newOwner.value
-      }),
+      })),
       sha: sha, // Vous devez fournir le sha du fichier actuel
     });
   })
