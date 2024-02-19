@@ -11,9 +11,11 @@
 import dataFile from './content/data.json'
 import { Octokit } from "@octokit/rest"
 
+const runtimeConfig = useRuntimeConfig()
+
 // Créez une instance Octokit en utilisant votre token d'authentification
 const octokit = new Octokit({
-  auth: "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",
+  auth: runtimeConfig.public.GITHUB_AUTH,
 });
 const data = ref('')
 const newOwner = ref('')
