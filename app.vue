@@ -13,7 +13,7 @@ import { Octokit } from "@octokit/rest"
 
 // Créez une instance Octokit en utilisant votre token d'authentification
 const octokit = new Octokit({
-  auth: "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",
+  auth: "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",
 });
 const data = ref('')
 const newOwner = ref('')
