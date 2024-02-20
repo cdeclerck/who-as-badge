@@ -2,6 +2,12 @@
 const INVALID_CHAR_REGEX = /[\x00-\x1F\x7F<>*#"{}|^[\]`;?:&=+$,]/g;
 const DRIVE_LETTER_REGEX = /^[a-z]:/i;
 export default defineNuxtConfig({
+  experimental: {
+    payloadExtraction: false,
+  },
+  nitro: {
+    preset: 'github-pages',
+  },
   vite: {
     build: {
       rollupOptions: {
